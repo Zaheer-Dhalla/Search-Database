@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Search Database</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    
+    <center>
+      <h1 class = "header"> Search Database</h1>
+    </center>
+    
+    <br>
+    <h3>We are currently undergoing scheduled maintenance. You may experience longer boot times than usual.</h3>
+    
+    <!--We load the sorted arrays on boot, meaning it will take time for each computer to process the sorted arrays. Thank you for your patience :)-->
+    
+    <h1 id="miniheader">Search:</h1>
+    <img id="darkModeButton" src= "https://images.cooltext.com/5588526.gif" onclick="darkMode()"style="float: right;">
+    
+    <input id="userInput" placeholder="Input Name/Title/UID"/> 
+    
+    <br>
+    <br>
+    
+    <div class ="dropMenu">
+      <button onclick = "toggleList('drops')" class = "dropDown" id=filterPlaceHolder> Filters</button>
+      
+      <div id ="drops" class = "dropdown-items">
+        <a href="#" id="fnFilterClicked" onclick="buttonChange('firstName')">First Name</a>
+        <a href="#" id="lnFilterClicked" onclick="buttonChange('lastName')">Last Name</a>
+        <a href="#" id="uIDFilterClicked" onclick="buttonChange('uID')">UID</a>
+        <a href="#" id="bTFilterClicked" onclick="buttonChange('bookTitle')">Book Title</a>
+      </div>
+      
+      <button onclick="delegateSort();" class="buttons">Search</button>
+    </div>
+
+    <br>
+      <div id="metadata"> 
+      <p id="performance"></p>
+      <h3 id = "numberResults"></h3>
+      </div>
+    <div id = "resultants">
+      <ul id = "output">
+      </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--<img id="easteregg" onclick="filterCheck('easteregg')"  src = "https://i.kym-cdn.com/photos/images/original/001/404/468/698.gif">-->
+    <script src="script.js" type='module'></script>
+  </body>
+</html>
